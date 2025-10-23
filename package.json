@@ -12,6 +12,10 @@
   "scripts": {
     "test": "playwright test",
     "test:demo": "playwright test test/demo.spec.ts",
-    "report": "allure generate allure-results --clean && allure open"
+    "test:non-param": "playwright test test/non-parameterized.spec.ts",
+    "test:when-not": "playwright test test/when-not-to-parameterize.spec.ts",
+    "report": "allure generate allure-results --clean && allure open",
+    "cleanup": "scripts\\cleanup.bat",
+    "cleanup:full": "scripts\\cleanup.bat full"
   }
 }

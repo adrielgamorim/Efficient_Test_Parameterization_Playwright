@@ -81,6 +81,22 @@ npm run report
 
 - `npm run test:demo` - Run parameterization demo tests
 - `npm run report` - Generate and open Allure report
+- `npm run cleanup` - Remove test output folders (reports/results)
+- `npm run cleanup:full` - Deep reset: also deletes `node_modules` and `package-lock.json` (reinstall required)
+
+### Cleanup Details
+Use `npm run cleanup` when you only want to clear generated artifacts before a fresh test run or to reduce repo noise.
+
+Use `npm run cleanup:full` when you need to:
+- Regenerate a clean `package-lock.json` (e.g., to purge incorrect registry URLs)
+- Fully reinstall dependencies after upgrading Node or fixing registry issues
+- Resolve stubborn caching problems
+
+After a full cleanup run:
+```bash
+npm install
+```
+to restore dependencies.
 
 ## Key Patterns Demonstrated
 

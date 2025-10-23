@@ -1,2 +1,6 @@
 /node_modules
 package-lock.json
+allure-report/
+allure-results/
+playwright-report/
+test-results/
